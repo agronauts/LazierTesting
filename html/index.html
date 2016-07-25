@@ -11,11 +11,9 @@
 <body>
 <div class="section section-left">
     <span class="control-buttons">
-            <input type="button" class="btn btn-success" value="Refresh" data-ng-click="loadData()">
+            <input type="button" class="btn btn-primary" value="Refresh" data-ng-click="loadData()">
             <input type="button" class="btn btn-success" value="Reload PDF" data-ng-click="updatePdf()">
             <input type="button" class="btn btn-danger" value="Reset" data-ng-click="reset()">
-            <input type="button" class="btn btn-warning" value="Auto Assign" data-ng-click="autoAssign()">
-            <input type="button" class="btn btn-warning" value="Update Tests" data-ng-click="loadNew()" disabled="disabled" title="Yeah, this doesn't work yet.">
         </span>
 
     <table style="width: 100%" class="table table-hover">
@@ -92,11 +90,9 @@
     </table>
 
     <span class="control-buttons">
-            <input type="button" class="btn btn-success" value="Refresh" data-ng-click="loadData()">
+            <input type="button" class="btn btn-primary" value="Refresh" data-ng-click="loadData()">
             <input type="button" class="btn btn-success" value="Reload PDF" data-ng-click="updatePdf()">
             <input type="button" class="btn btn-danger" value="Reset" data-ng-click="reset()">
-            <input type="button" class="btn btn-warning" value="Auto Assign" data-ng-click="autoAssign()">
-            <input type="button" class="btn btn-warning" value="Update Tests" data-ng-click="loadNew()" disabled="disabled" title="Yeah, this doesn't work yet.">
         </span>
     </div>
     <iframe id="pdf-frame" src="{{pdfUrl}}" class="section section-right"></iframe>

@@ -18,18 +18,18 @@ app.controller('lazy-testing-controller', function ($scope, $http) {
     $scope.loadData();
     
     $scope.autoAssign = function () {
-        if (!confirm("Are you sure? This action is irreversable and everyone will hate you for it.")) {
-            return;
-        }
-        $http.get('/api/autoassign')
-                    .then(function (response) {
-            $scope.loadData();
-        },
-                    function (response) {
-            // error
-            alert('AN ERROR! Damn you. I order you to go fix whatever you broke...');
-        });
+				setTimeout( function() {
+					$http.get('/api/autoassign')
+											.then(function (response) {
+							$scope.loadData();
+					},
+											function (response) {
+							// error
+							alert('AN ERROR! Damn you. I order you to go fix whatever you broke...');
+					});}
+				  , 5000);
     };
+		$scope.autoAssign();
     
     $scope.reset = function () {
         if (!confirm("Are you sure? This action is irreversable and everyone will hate you for it.")) {
@@ -38,6 +38,7 @@ app.controller('lazy-testing-controller', function ($scope, $http) {
         $http.get('/api/reset')
                     .then(function (response) {
             $scope.loadData();
+						$scope.autoAssign();
         },
                     function (response) {
             // error
