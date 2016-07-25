@@ -5,7 +5,7 @@ var markdownpdf = require("markdown-pdf"),
     style = null;
 
 exports.generatePdf = function(data, callback) {
-	var tableData = [['Feature','Scenario','Tester','Last Tested','Passing','Comments']];	
+	var tableData = [['Feature','Scenario','Tester','Last Tested','Passing','Comments (Must be in one line)']];	
 	for (var f in data) {
 		var feature = data[f];
 		for (var i = 0; i < feature.scenarios.length; i++) {
